@@ -1,0 +1,51 @@
+{
+  "name": "asus",
+  "version": "1.0.0",
+  "description": "asus2019",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp & http-server dist -o & echo \"\n Приятной работы! (0_0) \n\n \" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.rubium.ru:iguides/asus.git"
+  },
+  "keywords": [
+    "html",
+    "template"
+  ],
+  "author": "Rubium",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "gulp-auto-reload": "^0.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-hogan": "^2.0.0",
+    "gulp-image": "^4.3.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svg-sprites": "^4.1.2",
+    "gulp-svgmin": "^2.1.0",
+    "http-server": "^0.11.1",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1",
+    "vue": "^2.6.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-uglify-es": "^1.0.4",
+    "postcss-reporter": "^6.0.1",
+    "postcss-scss": "^2.0.0",
+    "stylelint": "^9.10.1"
+  }
+}

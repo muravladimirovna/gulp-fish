@@ -1,0 +1,56 @@
+<div id="container" class="container">
+	<div class="yota_blue-wrap">
+		<h2>Тест на интуицию</h2>
+		<p>Придумали для тебя забавный тест с подарками. Угадай, кто написал сообщения: это были реальные пользователи или причины выдумала редакция. Показалось, что знаешь ответ — тогда тяни карточку в нужную сторону.</p>
+		<div class="yota_test-outer">
+			<div class="yota_test-wrap _yota_test_wrapper">
+				<div class="yota_test-path">
+					<div class="yota_path-left"><h3>Выдумка!</h3></div>
+					<div class="yota_path-right"><h3>Реальный<br>клиент</h3></div>
+				</div>
+
+
+	    		<div class="droppable-wrap">
+			        <div id="droppable0" class="ui-widget-header droppable" data-result="1"></div>				    			
+	    		</div>
+
+				<div class="draggable-wrapper" id="questions">
+
+
+			        <list-item
+						v-for="(item,index) in questions"
+						v-bind:todo="item"
+						v-bind:index="index">
+			    	</list-item>
+					
+			        <div class="draggable__result-wrap _draggable__result _hidden">
+
+				        <error-item
+							v-bind:index="rightAnswers"
+							v-bind:plural="pluralForm(rightAnswers)"
+							v-bind:count="answersCount">
+				    	</error-item>
+
+			        	<div class="draggable__result draggable__card success">
+			        		<h3>УРА!<br>ЭТО ПОБЕДА!</h3>
+			        		<p>Оставь свою почту, чтобы получить шанс выйграть подарок от Yota.</p>
+			        		<form action="">
+			        			<label for="">
+			        				<input type="text" name="email" placeholder="E-mail" required="required">
+			        			</label>
+				        		<button class="submit" onclick=""></button>
+			        		</form>
+			        	</div>
+
+			        </div>
+
+			    </div>
+
+	    		<div class="droppable-wrap">
+			        <div id="droppable1" class="ui-widget-header droppable" data-result="0"></div>				    			
+	    		</div>
+
+			</div>
+		</div>
+	</div>
+</div>

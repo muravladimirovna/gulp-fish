@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{> components/head}}
+</head>
+<body>
+	<div class="page__content">
+		{{> components/header}}
+		<div id="content">
+			<!-- content -->
+		</div>
+	</div>
+	{{> components/footer}}
+	<script src="/js/app.min.js"></script>
+	<script src="/js/libs.min.js"></script>
+</body>
+</html>

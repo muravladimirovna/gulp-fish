@@ -1,0 +1,29 @@
+version: "3.4"
+services:
+  nginx:
+    image: ${CI_SOURCE_IMAGE_WITH_TAG}
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.enable=true
+        - traefik.tags=traefik_public
+        - traefik.docker.network=traefik_public
+        - traefik.frontend.rule=Host:${CI_PROJECT_PATH_SLUG}-$CI_COMMIT_REF_SLUG.${REVIEW_DOMAIN}
+        - traefik.port=80
+        - traefik.frontend.auth.basic=admin:$$apr1$$JEK6hW6f$$IoMfMhRTzTLRNGwUa7xl1/
+        - traefik.frontend.passHostHeader=true
+        - traefik.frontend.entryPoints=http,https
+        - traefik.backend=nginx-${CI_PROJECT_PATH_SLUG}-${CI_COMMIT_REF_SLUG}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - traefik_public
+      - internal
+networks:
+  traefik_public:
+    external: true
+  internal:
+    driver: overlay

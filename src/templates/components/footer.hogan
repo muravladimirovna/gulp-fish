@@ -1,0 +1,8 @@
+<footer></footer>
+<script src="https://iprodev.github.io/Scrollax.js/lib/scrollax.min.js"></script>
+<script>
+    $(window).on("load", function() {
+        if($('body').outerWidth(true) > 760)
+            $.Scrollax();
+    })
+</script>
